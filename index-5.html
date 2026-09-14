@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Special Gift promotional offer">
+<title>🎁 Special Gift Offer</title>
+<style>
+:root{--red:#e63946;--dark:#17151b;--muted:#68656d;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:#f7f7fb;color:var(--dark)}
+.hero{min-height:100vh;padding:18px 14px 45px;background:linear-gradient(145deg,#fff7df 0%,#f5e9ff 100%)}
+.wrap{max-width:1050px;margin:auto}
+.top{text-align:center;padding:18px 8px 10px}
+.badge{display:inline-block;background:#fff;border:1px solid #eee;padding:9px 16px;border-radius:99px;font-weight:800;font-size:13px;box-shadow:0 8px 24px #00000010}
+h1{font-size:clamp(39px,8vw,70px);line-height:.99;margin:19px auto 14px;letter-spacing:-2px;max-width:800px}
+h1 span{color:var(--red)}
+.sub{max-width:690px;margin:auto;color:var(--muted);font-size:18px;line-height:1.55}
+.grid{display:grid;grid-template-columns:1fr 430px;gap:28px;align-items:center;margin-top:22px}
+.info{padding:20px}
+.gift{font-size:105px;text-align:center;filter:drop-shadow(0 14px 12px #0002);margin-bottom:8px}
+.info h2{font-size:29px;margin:0 0 15px}
+.points{display:grid;gap:11px}
+.point{background:#fff;border-radius:15px;padding:15px 16px;font-weight:700;box-shadow:0 7px 22px #0000000d}
+.card{background:var(--card);padding:29px;border-radius:27px;box-shadow:0 20px 60px #0000001c}
+.card h2{text-align:center;font-size:30px;margin:0 0 7px}
+.card>p{text-align:center;color:var(--muted);line-height:1.5;margin:0 0 21px}
+.timer{display:flex;justify-content:center;align-items:center;gap:7px;background:#fff3f3;color:#bd202f;border-radius:12px;padding:12px;margin-bottom:16px;font-weight:800}
+#timer{font-variant-numeric:tabular-nums}
+.cta{display:block;text-align:center;text-decoration:none;color:#fff;background:var(--red);padding:18px 16px;border-radius:14px;font-size:19px;font-weight:900;box-shadow:0 12px 28px #e6394645;transition:.18s}
+.cta:hover{transform:translateY(-2px)}
+.note{text-align:center;font-size:12px;line-height:1.5;color:#777;margin-top:13px}
+.faq{max-width:850px;margin:50px auto 0}
+.faq h2{text-align:center;margin:0 0 18px;font-size:28px}
+details{background:#fff;border-radius:13px;padding:16px 17px;margin:9px 0;box-shadow:0 5px 18px #00000009}
+summary{cursor:pointer;font-weight:800}
+details p{color:var(--muted);line-height:1.5;margin:10px 0 0}
+.footer{text-align:center;margin-top:30px;font-size:12px;color:#777}
+@media(max-width:800px){
+ .grid{grid-template-columns:1fr}
+ .info{text-align:center;padding:10px}
+ .card{max-width:480px;margin:auto;width:100%}
+ .points{text-align:left}
+ h1{letter-spacing:-1.3px}
+}
+</style>
+</head>
+<body>
+<main class="hero">
+<div class="wrap">
+<section class="top">
+<div class="badge">🎁 SPECIAL GIFT OFFER</div>
+<h1>Discover Your <span>Special Gift</span></h1>
+<p class="sub">Continue through the promotional offer to check your eligibility and see what is available.</p>
+</section>
+
+<section class="grid">
+<div class="info">
+<div class="gift" aria-hidden="true">🎁</div>
+<h2>A Simple Way to Continue</h2>
+<div class="points">
+<div class="point">✅ Quick and simple process</div>
+<div class="point">🎁 Promotional gift opportunity</div>
+<div class="point">📱 Designed for mobile</div>
+<div class="point">🔒 Secure offer tracking</div>
+</div>
+</div>
+
+<div class="card">
+<h2>Claim Your Gift</h2>
+<p>Tap the button below to continue to the offer and follow the instructions provided there.</p>
+
+<div class="timer">⏳ Offer window: <span id="timer">10:00</span></div>
+
+<a class="cta" id="offerBtn"
+href="https://app.trcefy.com/click?pid=2&offer_id=22011&sub2=u830378&sub5=landingpage">
+🎁 CLAIM MY GIFT
+</a>
+
+<div class="note">Offer availability and eligibility may vary. Review the offer terms on the next page.</div>
+</div>
+</section>
+
+<section class="faq">
+<h2>Frequently Asked Questions</h2>
+<details><summary>How do I continue?</summary><p>Tap “Claim My Gift” and follow the instructions shown on the offer page.</p></details>
+<details><summary>Is the gift guaranteed?</summary><p>Availability and eligibility depend on the promotional offer and its terms.</p></details>
+<details><summary>What happens after I click?</summary><p>You will be taken to the promotional offer page, where the required steps and terms will be displayed.</p></details>
+</section>
+
+<footer class="footer">© 2026 Special Gift Offer · Promotional page</footer>
+</div>
+</main>
+
+<script>
+/* Visual urgency only. It is not presented as an official offer deadline. */
+let seconds=600;
+const timer=document.getElementById("timer");
+function tick(){
+  const m=Math.floor(seconds/60),s=seconds%60;
+  timer.textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+  if(seconds>0) seconds--;
+}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
